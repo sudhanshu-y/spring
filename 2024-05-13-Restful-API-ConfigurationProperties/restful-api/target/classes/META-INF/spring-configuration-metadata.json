@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "currency-service",
+      "type": "com.sudhanshu.spring.restfulapi.CurrencyServiceConfiguration",
+      "sourceType": "com.sudhanshu.spring.restfulapi.CurrencyServiceConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "currency-service.key",
+      "type": "java.lang.String",
+      "sourceType": "com.sudhanshu.spring.restfulapi.CurrencyServiceConfiguration"
+    },
+    {
+      "name": "currency-service.url",
+      "type": "java.lang.String",
+      "sourceType": "com.sudhanshu.spring.restfulapi.CurrencyServiceConfiguration"
+    },
+    {
+      "name": "currency-service.user",
+      "type": "java.lang.String",
+      "sourceType": "com.sudhanshu.spring.restfulapi.CurrencyServiceConfiguration"
+    }
+  ],
+  "hints": []
+}
