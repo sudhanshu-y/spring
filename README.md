@@ -40,3 +40,14 @@ birthDate - should be in past
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-web</artifactId>
 </dependency>
+
+
+
+# 2024-05-25-Rest-API-JPA-MySQL
+
+docker run --detach --env MYSQL_ROOT_PASSWORD=password --env MYSQL_USER=username --env MYSQL_PASSWORD=password --env MYSQL_DATABASE=employeedb --name mysql --publish 3306:3306 mysql:8-oracle
+
+Download MySQL Shell:
+https://dev.mysql.com/downloads/shell/
+
+Check Table Data in MySQL Shell.
