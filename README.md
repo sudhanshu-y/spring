@@ -51,3 +51,35 @@ Download MySQL Shell:
 https://dev.mysql.com/downloads/shell/
 
 Check Table Data in MySQL Shell.
+
+# 2024-05-26-MS/config-server
+
+Git Download:
+	https://git-scm.com/downloads
+	https://git-scm.com/download/win
+
+git config --global user.email "email@.com"
+git config --global user.name "username"
+
+mkdir git-local-config-repo
+cd git-local-config-repo/
+git init
+touch limit-service.properties & define minimum and maximum properties of limit-service
+git add *
+git commit -m "adding limit-service.properties to git"
+
+provide limit-service.properties file path to application.properties of config-server ms. 
+
+1) Limit-ms: LimitController --> REST API: getLimits() --> Get Employee Class property from class defination 
+2) Limit-ms: LimitController --> Create Customized Configuration - @ConfigurationProperties("limits-service") & Read value from application.properties file.
+3) MS Architecture: De-coupled way --> Store property configuration on git & config-server. Limit-ms to access properties through config client from config-server.
+URL: http://localhost:8080/limits-from-property --> Property will be refered frim config-server git repositories.
+Start config-server: http://localhost:8888/limit-service/default - limit-service is same as limit-service.properties (push this properties to git)
+server.port=8888
+spring.cloud.config.server.git.uri=file:/C:/Users/SUDHANSHU/Desktop/Spring/2024-05-26-MS/git-local-config-repo
+
+Start Limit-ms: 
+spring.config.import=optional:configserver:http://localhost:8888
+spring.cloud.config.profile=prod --> Get properties from prod profile from git repository 
+
+
