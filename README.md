@@ -55,18 +55,27 @@ Check Table Data in MySQL Shell.
 # 2024-05-26-MS/config-server
 
 Git Download:
+
 	https://git-scm.com/downloads
+ 
 	https://git-scm.com/download/win
 
 git config --global user.email "email@.com"
+
 git config --global user.name "username"
 
 mkdir git-local-config-repo
+
 cd git-local-config-repo/
+
 git init
+
 touch limit-service.properties & define minimum and maximum properties of limit-service
+
 git add *
+
 git commit -m "adding limit-service.properties to git"
+
 
 provide limit-service.properties file path to application.properties of config-server ms. 
 
